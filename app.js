@@ -3,9 +3,7 @@ import moviesModule from "./moviesModule.js";
 import statsModule from "./statsModule.js";
 import eventsMediator from "./eventsMediator.js";
 
-
 var mediator, stats, movie, modal
-
 
 $(document).ready(function () {
 
