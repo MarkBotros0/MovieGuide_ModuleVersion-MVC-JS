@@ -56,10 +56,28 @@ main {
         .card {
             background-color: white;
             cursor: pointer;
+            overflow: hidden;
+
+            .item {
+                overflow: hidden;
+
+                img {
+                    -webkit-transition: 0.8s ease;
+                    transition: 0.8s ease;
+                }
+            }
         }
 
         .card:hover {
             background-color: #d6d4d488;
+            overflow: hidden;
+
+            .item {
+                img {
+                    -webkit-transform: scale(1.2);
+                    transform: scale(1.2);
+                }
+            }
         }
     }
     .myBtn {

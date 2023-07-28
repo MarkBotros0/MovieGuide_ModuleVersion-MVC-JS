@@ -15,8 +15,11 @@ export default class modalModule {
         $(".movie-rate").text("IMDB Rating: " + rating + "/10")
         $(".movie-desc").text(desc)
         $(".movie-img").attr("src", img)
+        $("body").attr("style", "overflow: hidden;")
     }
+
     closeModal() {
         $(".my-modal-view").toggleClass("d-none")
+        $("body").attr("style", "overflow: none;")
     }
 }

@@ -23,7 +23,7 @@ export default class moviesModule {
                 accept: 'application/json',
                 Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhMTQ2MzgxMDgzNzliODFjZWNiYTE4ZmI4MDMzZTBiNSIsInN1YiI6IjY0NzczZTc3MDA1MDhhMDExNmQ1NTViNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.5aEDM2F7O2mNwqxa-ktSn9xPYzgqNlL-KLaNEyHQxfg'
             }, success: (result) => {
-                $(".myloader").toggleClass("d-none");
+                $(".myloader").addClass("d-none");
                 this.movies = result.results
                 this.render()
                 this.getTopRating()
@@ -45,7 +45,9 @@ export default class moviesModule {
             let imgUrl = `https://www.themoviedb.org/t/p/w600_and_h900_bestv2/${movie.poster_path}`
             $(".my-grid").append(
                 `<div class=" card card${i}">
-                    <img src="${imgUrl}" class="img-fluid card-img-top">
+                    <div class="item">
+                        <img src="${imgUrl}" class="img-fluid card-img-top">
+                    </div>
                     <div class="card-body text-center">
                         <h6>${movie.original_title}</h6>
                         <h6>${movie.vote_average}</h6>
